@@ -1,6 +1,7 @@
 const choices = document.querySelectorAll('.choice');
 const resultJoueur = document.getElementById('score_joueur')
 const resultIa = document.getElementById('score_ordinateur')
+const restartBtn = document.getElementById('restart');
 let score = {
     player : 0,
     ia : 0
@@ -61,11 +62,22 @@ function getNewScore(winner) {
     if(winner == 'the player win'){
         score.player ++;
         resultJoueur.innerHTML = `Joueur : ${score.player}`
+        if(score.player > 0) {
+            showRestartBtn()
+        }
     } else if(winner == 'the ia win') {
         score.ia ++;
         resultIa.innerHTML = `Ordinateur : ${score.ia}`
+        if(score.ia > 0) {
+            showRestartBtn()
+        }
     }
 
+}
+
+function showRestartBtn() {
+    restartBtn.classList.remove('d-none')
+   // restartBtn.classList.add('d-flex')
 }
 
 
