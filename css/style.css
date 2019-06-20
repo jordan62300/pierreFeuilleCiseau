@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.score {
+   padding: 15px 50px; 
+}
+
+.bold  {
+    font-weight: bold;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.choices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
