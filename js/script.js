@@ -7,6 +7,7 @@ let score = {
     ia : 0
 }
 
+    // start the game 
 function play(e) {
     const playerHand = e.target.id ;
     console.log(playerHand);
@@ -18,6 +19,7 @@ function play(e) {
 
 }
 
+    // get random event
 function getRandomHand() {
   let  randomNumberBetween1To3 =   Math.floor(Math.random() * (4 - 1)) + 1;
     if(randomNumberBetween1To3 == 1) {
@@ -30,6 +32,7 @@ function getRandomHand() {
    
 }
 
+    // compare the results and show the winner
 function getWinner(playerHand,iaHand) {
     if(playerHand == iaHand ) {
         return 'its a draw';
@@ -58,6 +61,7 @@ function getWinner(playerHand,iaHand) {
 }
 }
 
+// obtain the new score 
 function getNewScore(winner) {
     if(winner == 'the player win'){
         score.player ++;
@@ -75,10 +79,13 @@ function getNewScore(winner) {
 
 }
 
+// show the restart button
 function showRestartBtn() {
     restartBtn.classList.remove('d-none')
 }
 
+
+// Restart the game
 function restart() {
     score.player = 0
     score.ia = 0
