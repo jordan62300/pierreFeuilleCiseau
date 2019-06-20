@@ -77,15 +77,22 @@ function getNewScore(winner) {
 
 function showRestartBtn() {
     restartBtn.classList.remove('d-none')
-   // restartBtn.classList.add('d-flex')
+}
+
+function restart() {
+    score.player = 0
+    score.ia = 0
+    resultJoueur.innerHTML = `Joueur : ${score.player}`
+    resultIa.innerHTML = `Ordinateur : ${score.ia}`
 }
 
 
 
 
-// Clear modal
+
 
   
   // Event listeners
   
  choices.forEach(choice => choice.addEventListener('click', play));
+ restartBtn.addEventListener("click",restart);
