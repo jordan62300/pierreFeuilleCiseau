@@ -1,4 +1,10 @@
 const choices = document.querySelectorAll('.choice');
+const resultJoueur = document.getElementById('score_joueur')
+const resultIa = document.getElementById('score_ordinateur')
+let score = {
+    player : 0,
+    ia : 0
+}
 
 function play(e) {
     const playerHand = e.target.id ;
@@ -7,6 +13,7 @@ function play(e) {
    console.log('choix de IA ' + iaHand)
    const winner = getWinner(playerHand,iaHand);
    console.log(`${winner}`);
+   getNewScore(winner)
 
 }
 
@@ -48,6 +55,17 @@ function getWinner(playerHand,iaHand) {
         }
     
 }
+}
+
+function getNewScore(winner) {
+    if(winner == 'the player win'){
+        score.player ++;
+        resultJoueur.innerHTML = `Joueur : ${score.player}`
+    } else if(winner == 'the ia win') {
+        score.ia ++;
+        resultIa.innerHTML = `Ordinateur : ${score.ia}`
+    }
+
 }
 
 
