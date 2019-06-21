@@ -2,6 +2,7 @@ const choices = document.querySelectorAll('.choice');
 const resultJoueur = document.getElementById('score_joueur')
 const resultIa = document.getElementById('score_ordinateur')
 const restartBtn = document.getElementById('restart');
+const uiWinner = document.getElementById('winner');
 let score = {
     player : 0,
     ia : 0
@@ -16,6 +17,8 @@ function play(e) {
    const winner = getWinner(playerHand,iaHand);
    console.log(`${winner}`);
    getNewScore(winner)
+   showWinner(winner,iaHand)
+
 
 }
 
@@ -91,6 +94,25 @@ function restart() {
     score.ia = 0
     resultJoueur.innerHTML = `Joueur : ${score.player}`
     resultIa.innerHTML = `Ordinateur : ${score.ia}`
+}
+
+//Show the winner
+function showWinner(winner,iaHand) {
+    if(winner == 'the player win')
+    {
+    uiWinner.innerHTML = `The IA chose ${iaHand} , 
+    you win the round`;
+    }
+    else if(winner == 'the ia win')
+    {
+        uiWinner.innerHTML = `The IA chose ${iaHand} , 
+        you lose the round`;
+    }
+    else
+     {
+        uiWinner.innerHTML = `The IA chose ${iaHand} , 
+        it's a draw`;
+    }
 }
 
 
