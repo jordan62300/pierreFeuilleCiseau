@@ -10,28 +10,36 @@
     <link href="/fontawesome-free-5.9.0-web/css/fontawesome.css" rel="stylesheet">
     <link href="/fontawesome-free-5.9.0-web/css/brands.css" rel="stylesheet">
     <link href="fontawesome-free-5.9.0-web/css/solid.css" rel="stylesheet">
+    <script defer src="/node_modules/swup/dist/swup.min.js"></script>
+    <script defer src="\node_modules\@swup\overlay-theme\dist\SwupOverlayTheme.min.js"></script>
     <script defer src="js/script.js"></script>
+    <script defer src="js/swup.js"></script>
 </head>
 <body>
-    <div class=" bg-info border-bottom border-primary">
-        <h1 class="text-center  text-dark b-4">choisissez votre main</h1>
-    </div>
-    <div class="text-center bg-info">
-            <button id="restart" class=" btn btn-warning mt-2 d-none">Rejouer</button>
-    </div>
-    <div class=" bg-info resultat text-center d-flex flex-row justify-content-center p-4">
-        
-    <p id="score_joueur" class="bold score  bg-success">Joueur : 0</p>
-    <p id="score_ordinateur" class="bold score bg-danger">Ordinateur : 0</p>
-    </div>
-    <div class="p-4 m-4 text-center choices">
-        <i id="pierre" class=" choice cursor fas fa-hand-rock fa-10x p-4 mx-4"></i>
-        <i id="feuille" class="choice cursor fas fa-hand-paper fa-10x p-4 mx-4"></i>
-        <i id="ciseau" class="choice cursor fas fa-hand-scissors fa-10x p-4 mx-4"></i>
-    </div>
-    <div class="text-center">
-        <p id="winner"></p>
-    </div>
-    
+   
+        <div class=" bg-info border-bottom border-primary">
+            <h1 class="text-center  text-dark b-4">choisissez votre main</h1>
+        </div>
+        <div class="text-center bg-info">
+                <button id="restart" class=" btn btn-warning mt-2 d-none">Rejouer</button>
+        </div>
+        <div class=" bg-info resultat text-center d-flex flex-row justify-content-center p-4">
+            
+        <p id="score_joueur" class="bold score  bg-success">Joueur : 0</p>
+        <p id="score_ordinateur" class="bold score bg-danger">Ordinateur : 0</p>
+        </div>
+        <main id="swup" class="transition-fade">
+        <div class="p-4 m-4 text-center choices">
+            <i id="pierre" class=" choice cursor fas fa-hand-rock fa-10x p-4 mx-4"></i>
+            <i id="feuille" class="choice cursor fas fa-hand-paper fa-10x p-4 mx-4"></i>
+            <i id="ciseau" class="choice cursor fas fa-hand-scissors fa-10x p-4 mx-4"></i>
+        </div>
+        <div class="text-center">
+            <p id="winner"></p>
+        <a href="/page.html">click moi page deux</a>
+        </div>
+    </main>
+
+  
 </body>
 </html>

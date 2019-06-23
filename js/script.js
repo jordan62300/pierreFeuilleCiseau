@@ -117,11 +117,11 @@ function showWinner(winner,iaHand) {
 
 
 
-
-
-
-  
   // Event listeners
   
  choices.forEach(choice => choice.addEventListener('click', play));
  restartBtn.addEventListener("click",restart);
+
+ // swup
+
+
